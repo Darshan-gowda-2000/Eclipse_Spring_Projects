@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Students</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 90%;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>All Students</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Roll Number</th>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>Year of Passing</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Thymeleaf loop to iterate over the list of students -->
+                <tr th:each= "st : ${studentList}">
+                    <td th:text="${st.roll}"></td>
+                    <td th:text="${st.name}"></td>
+                    <td th:text="${st.branch}"></td>
+                    <td th:text="${st.yop}"></td>
+                    <td th:text="${st.cgpa}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+
+        .form-group p {
+            display: block;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Student Details</h2>
+        <div class="form-group">
+            <label for="roll">Student Roll:</label>
+            <p th:text="${student.roll}"></p>
+        </div> 
+        <div class="form-group">
+            <label for="name">Student Name:</label>
+            <p th:text="${student.name}"></p>
+        </div>
+        <div class="form-group">
+            <label for="branch">Student Branch:</label>
+            <p th:text="${student.branch}"></p>
+        </div>
+        <div class="form-group">
+            <label for="yop">Year of Passing:</label>
+            <p th:text="${student.yop}"></p>
+        </div>
+        <div class="form-group">
+            <label for="cgpa">CGPA:</label>
+            <p th:text="${student.cgpa}"></p>
+        </div>
+    </div>
+</body>
+</html>

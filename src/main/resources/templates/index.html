@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input {
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/openAddStudent">Add Student</a>
+        <a href="/openUpdateStudent">Update Student</a>
+        <a href="/openSearchStudent">Search Student</a>
+        <a href="/openDeleteStudent">Delete Student</a>
+        <a href="/fetchAllStudents">Fetch All Students</a>	
+        <a href="/deleteAllStudents">Delete All Students</a>
+    </div>
+    
+   <div class="msg" th:if="${msg}">
+        <p th:text="${msg}"></p>
+    </div>
+    
+</body>
+</html>
