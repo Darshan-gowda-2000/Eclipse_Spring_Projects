@@ -21,7 +21,7 @@ import student.management.services.StudentService;
 
 // When we want to return html pages display the data we have to use @Controller
 // If we want to return String we have to use @RestController
-@Controller                                     
+@Controller
 public class StudentController {
  
 	
@@ -50,6 +50,7 @@ public class StudentController {
 		System.out.println(st);
 		return "Student data recived";
 	} */
+	
 	
 	
 	// Creating in
